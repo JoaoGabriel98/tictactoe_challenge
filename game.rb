@@ -91,9 +91,9 @@ class TicTacToe
   #Insert value. Also, validates the entry  
   def insert(valid, message = "")
     puts message unless message.empty?
-    validate = gets.chomp
-    raise unless valid.include?(validate)
-    validate
+    validated_message = gets.chomp
+    raise unless valid.include?(validated_message)
+    validated_message
   rescue
     puts 'Select a valid option!'
     retry
